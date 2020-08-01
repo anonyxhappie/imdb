@@ -1,0 +1,12 @@
+[settings]
+DEBUG=True
+SECRET_KEY=SECRET_KEY
+ALLOWED_HOSTS=localhost,127.0.0.1
+DATABASE_ENGINE=django.db.backends.sqlite3
+DATEBASE_NAME=db.sqlite3
+TIME_ZONE=Asia/Kolkata
+LOG_FILE_NAME=imdb_project_debug.log
+JSON_FILE_NAME=/imdb/sample.json
+ADMIN_USERNAME=admin
+ADMIN_EMAIL=admin@xyz.com
+ADMIN_PASSWORD=admin
