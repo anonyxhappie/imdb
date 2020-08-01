@@ -82,7 +82,7 @@ curl -X GET \
 - Login by admin for updating movie details
 - Browsable API UI helps to play around with API (try different search filters)
 
-# Scalablity
+# Scalability
 Once deployed suppose this application became very famous and started to receive
 a ton of traffic. Your application now contains metadata about 5M movies and
 receives 15M API hits per day both from anonymous as well as authenticated users.
