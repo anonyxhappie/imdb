@@ -77,6 +77,20 @@ curl -X GET \
 
 # DRF Web Browsable API
 - Open http://localhost:8000 in browser
-- Login by admin or normal user 
+- Get movie list at http://localhost:8000/movies/
+- Get single movie detail at http://localhost:8000/movies/1/
+- Login by admin for updating movie details
 - Browsable API UI helps to play around with API (try different search filters)
 
+# Scalablity
+Once deployed suppose this application became very famous and started to receive
+a ton of traffic. Your application now contains metadata about 5M movies and
+receives 15M API hits per day both from anonymous as well as authenticated users.
+Suggest an architecture to scale up this system to 5x of these specs.
+
+- Very first we need to replace the file based DB (sqlite3) to Production Level DB (MySQL/Postgres)
+- We would need to add caching mechanism (Redis/Memcached) for handling large number of requests (It'll help fetch data faster without interacting with DB)
+- We will add a sync to caching mechanism to update cache from DB by TTL at cache or write event on DB
+- We will create DB replication for better accessibility for read & write operations saperately & for better accessiblity 
+- We will have to set up a load balancer for scalling up the api & db servers
+- We can set throttling to limit requests by user/day 
