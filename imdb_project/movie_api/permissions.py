@@ -11,6 +11,7 @@ class CustomPermission(IsAdminUser):
         and CRUD to admin user
         """ 
         if request.method == 'GET':
-            return request.user.is_authenticated
+            # return request.user.is_authenticated
+            return True
         else:
             return request.user.is_staff
