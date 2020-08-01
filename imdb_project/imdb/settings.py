@@ -46,7 +46,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -186,6 +185,3 @@ LOGGING = {
 ADMIN_USERNAME = config('ADMIN_USERNAME')
 ADMIN_EMAIL = config('ADMIN_EMAIL')
 ADMIN_PASSWORD = config('ADMIN_PASSWORD')
-
-if not DEBUG:
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
